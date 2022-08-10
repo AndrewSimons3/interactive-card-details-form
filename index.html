@@ -1,51 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script defer src="./script.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Interactive card details form</title>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	</head>
+	<body>
+		<main class="container">
+			<div class="credit-card-container">
+				<div class="front-container">
+					<img class="front" src="./images/bg-card-front.png" />
+					<img class="logo" src="./images/card-logo.svg"/>
+					<p class="card-number-display">0000 0000 0000 0000</p>
+					<p class="cardholder-display">Jane Appleseed</p>
+					<p class="expiry-month-display">00 / </p>
+					<p class="expiry-year-display">00</p>
+				</div>
+				<div class="back-container">
+					<img class="back" src="./images/bg-card-back.png" />
+				</div>
+			</div>
+			<form class="form">
+				<div class="name field">
+					<label>Cardholder Name</label>
+					<input id="name" type="text" placeholder="e. g. Jane Appleseed" />
+				</div>
+				<div class="card-number field">
+					<label for="ccn">Credit Card Number:</label>
+					<input
+						id="card-number"
+						class="card-number"
+						type="text"
+						name="card-number"
+						inputmode="numeric"
+						pattern="[0-9\s]{13,19}"
+						autocomplete="cc-number"
+						maxlength="19"
+						placeholder=" e.g. 1234 5678 9123 0000"
+						oninput="inputCardNum()"
+					/>
+				</div>
+				<div class="expiration">
+					<label>Exp. Date (mm/yy)</label>
+					<input
+						type="text"
+						name="month"
+						placeholder="MM"
+						maxlength="2"
+						size="2"
+					/>
+					<input
+						type="text"
+						name="year"
+						placeholder="YY"
+						maxlength="2"
+						size="2"
+					/>
+				</div>
+				<div class="cvc field">
+					<label>cvc</label
+					><input
+						class="required"
+						id="field"
+						type="number"
+						max="999"
+						pattern="([0-9]|[0-9]|[0-9])"
+						name="cvv"
+					/>
+				</div>
+				<button class="confirm-btn">Confirm</button>
+			</form>
+			<!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+			Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+			e.g. 123 Confirm -->
+		</main>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://www.frontendmentor.io/profile/AndrewSimons3"
+				>Andrew Simons</a
+			>.
+		</div>
+		<!-- Completed state start -->
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<!-- Thank you! We've added your card details Continue -->
+	</body>
 </html>
