@@ -9,6 +9,7 @@
 body {
 	font-family: 'Space Grotesk', sans-serif;
 	background-image: url(./images/bg-main-desktop.png);
+
 	background-repeat: no-repeat;
 	max-width: 1440px;
 	padding: 3rem;
@@ -162,7 +163,7 @@ input::placeholder {
 }
 
 .expiration input {
-	width: 80px;
+	max-width: 80px;
 }
 
 .back {
@@ -206,6 +207,83 @@ input::placeholder {
 
 .hide {
 	display: none;
+}
+
+/* @media only screen and (max-width: 1000px) {
+	.container {
+		gap: 75px;
+	}
+} */
+
+@media only screen and (max-width: 1000px) {
+	.expiration {
+		grid-column: 1/4;
+		grid-row: 3/4;
+	}
+
+	.expiration label {
+		display: block;
+	}
+
+	label {
+		padding: 0;
+	}
+
+	input {
+		margin: 0;
+	}
+
+	.cvc {
+		grid-column: 1/3;
+		grid-row: 4/4;
+		margin-top: -9px;
+	}
+
+	.slash {
+		bottom: 50px;
+		    top: 203px;
+	}
+
+	
+}
+
+@media only screen and (max-width: 840px) {
+	body {
+		background-size: contain;
+	}
+
+	.container {
+		gap: 75px;
+	}
+
+	.front {
+		width: 340px;
+		height: 190px;
+	}
+
+	.back {
+		width: 340px;
+		height: 190px;
+	}
+
+	.card-number-display {
+		font-size: 18px;
+	}
+
+	.slash {
+		top: 148px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.hide-bg {
+		background-image: none;
+	}
+	body {
+		background-image: url(./images/bg-main-mobile.png);
+		background-repeat: no-repeat;
+		padding: 1rem;
+	}
 }
 
 .attribution {
