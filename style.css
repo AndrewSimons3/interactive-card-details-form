@@ -288,6 +288,12 @@ input::placeholder {
 	.slash {
 		top: 148px;
 	}
+
+	.cvc-display {
+		left: 264px;
+		top: 84px;
+		font-size: 14px;
+	}
 }
 
 @media only screen and (max-width: 700px) {
@@ -403,6 +409,11 @@ input::placeholder {
 	.expiry-month-display {
 		bottom: 18.5px;
 		right: 104.5px;
+	}
+
+	.cvc-display {
+		left: 216px;
+		top: 68px;
 	}
 }
 
