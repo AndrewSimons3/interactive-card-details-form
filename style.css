@@ -241,10 +241,8 @@ input::placeholder {
 
 	.slash {
 		bottom: 50px;
-		    top: 203px;
+		top: 203px;
 	}
-
-	
 }
 
 @media only screen and (max-width: 840px) {
@@ -275,7 +273,7 @@ input::placeholder {
 	}
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 700px) {
 	.hide-bg {
 		background-image: none;
 	}
@@ -283,6 +281,101 @@ input::placeholder {
 		background-image: url(./images/bg-main-mobile.png);
 		background-repeat: no-repeat;
 		padding: 1rem;
+	}
+
+	.container {
+		flex-direction: column;
+		padding: 3rem;
+		height: 100%;
+	}
+
+	.credit-card-container {
+		width: 100%;
+		flex-direction: column-reverse;
+		gap: 0;
+	}
+
+	.front-container {
+		bottom: 73px;
+	}
+
+	.back-container {
+		z-index: -1;
+	}
+
+	.expiration {
+		grid-column: 1/2;
+		grid-row: 3/4;
+	}
+
+	.cvc {
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	body {
+		background-image: url(./images/bg-main-mobile.png);
+		background-repeat: no-repeat;
+	}
+
+	.container {
+		padding: 1rem 0;
+	}
+
+	.credit-card-container {
+		align-items: initial;
+	}
+
+	.front {
+		width: 286px;
+		height: 157px;
+	}
+
+	.back {
+		width: 286px;
+		height: 157px;
+	}
+
+	.form {
+		width: 350px;
+		height: 352px;
+		margin-top: -100px;
+	}
+
+	.thank-you {
+		margin-top: -100px;
+		padding: 0 1rem;
+	}
+
+	.thank-you p {
+		margin-bottom: 0;
+	}
+
+	.card-number-display {
+		margin-left: 14px;
+		bottom: 49px;
+	}
+
+	.cardholder-display {
+		bottom: 17.5px;
+		left: 14px;
+	}
+
+	.expiry-year-display {
+		bottom: 17.5px;
+		right: 74.5px;
+	}
+
+	.slash {
+		top: 126px;
+		right: 95px;
+	}
+
+	.expiry-month-display {
+		bottom: 18.5px;
+		right: 104.5px;
 	}
 }
 
