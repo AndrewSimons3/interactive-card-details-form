@@ -10,6 +10,8 @@ const cardMonthExpirationDisplay = document.querySelector(
 const cardYearExpirationDisplay = document.querySelector(
 	'.expiry-year-display'
 );
+
+const cvcDisplay = document.querySelector('.cvc-display');
 const cardYear = document.getElementById('year');
 const cardCvc = document.getElementById('cvc');
 
@@ -82,7 +84,13 @@ function inputCvc() {
 	let cvcInput = cardCvc.value;
 	let formattedCvc = cvcInput.replace(/[^0-9]+/g, '');
 
-	cardCvc.value = formattedCvc;
+  cardCvc.value = formattedCvc;
+  
+  cvcDisplay.innerHTML = cardCvc.value;
+  if (cardCvc.value === '') {
+    cvcDisplay.innerHTML = '000'
+  }
+
 }
 
 function massValidate() {

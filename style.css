@@ -11,7 +11,7 @@ body {
 	background-image: url(./images/bg-main-desktop.png);
 	background-repeat: no-repeat;
 	max-width: 1440px;
-
+	padding: 1rem;
 }
 
 .container {
@@ -39,6 +39,7 @@ body {
 .cardholder-display,
 .expiry-month-display,
 .expiry-year-display,
+.cvc-display,
 .slash {
 	position: absolute;
 	color: #fff;
@@ -83,8 +84,19 @@ body {
 	right: 43.5px;
 }
 
+.cvc-display {
+	left: 360px;
+	top: 110px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
 .back-container {
 	align-self: end;
+	position: relative;
 }
 
 .front {
@@ -249,9 +261,10 @@ input::placeholder {
 	}
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 900px) {
 	body {
 		background-size: contain;
+		padding: 1rem;
 	}
 
 	.container {
